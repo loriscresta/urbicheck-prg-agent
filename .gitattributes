@@ -1,0 +1,5 @@
+# Shapefile come binari puri (no line ending conversion)
+*.shp binary
+*.dbf binary
+*.shx binary
+*.pr
