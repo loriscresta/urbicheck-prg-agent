@@ -1,14 +1,10 @@
-"""
-PRG Agent — Microservizio per query spaziali sul PRG Piemonte
-Mosaicatura PRG Regione Piemonte (shapefile)
-"""
+"""PRG Agent — Microservizio per query spaziali sul PRG Piemonte"""
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
-import os
-import logging
+import os, glob, logging
 
 from prg_query import PRGQuery
 from downloader import ensure_shapefile
@@ -16,44 +12,25 @@ from downloader import ensure_shapefile
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-app = FastAPI(
-    title="PRG Agent — Piemonte",
-    description="Microservizio per query spaziali sul PRG Piemonte (Mosaicatura regionale)",
-    version="1.0.0"
-)
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+app = FastAPI(title="PRG Agent — Piemonte", version="1.1.0")
+app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True,
+                   allow_methods=["*"], allow_headers=["*"])
 
 DATA_DIR = os.environ.get("DATA_DIR", "./data")
-
-# Cache in-memory delle query PRG
 _prg_cache: dict[str, PRGQuery] = {}
 
 
 def get_prg(comune: str) -> PRGQuery:
-    """Carica o recupera dalla cache il PRGQuery per un comune."""
     key = comune.upper().strip()
     if key not in _prg_cache:
         comune_dir = os.path.join(DATA_DIR, key)
         shp_file = os.path.join(comune_dir, "dest_uso_polyg.shp")
-
-        # Scarica se il file principale non è presente
         if not os.path.exists(shp_file):
             logger.info(f"Shapefile non trovato per {key}, download in corso...")
             success = ensure_shapefile(key, DATA_DIR)
             if not success:
-                raise HTTPException(
-                    status_code=404,
-                    detail=f"Shapefile PRG non disponibile per '{key}'. "
-                           f"Scaricalo da geoportale.piemonte.it → data/{key}/"
-                )
-
+                raise HTTPException(status_code=404,
+                    detail=f"Shapefile PRG non disponibile per \'{key}\'. Scaricalo da geoportale.piemonte.it → data/{key}/")
         logger.info(f"Caricamento shapefile per {key}...")
         _prg_cache[key] = PRGQuery(comune_dir)
         logger.info(f"Shapefile {key} caricato ({_prg_cache[key].feature_count()} feature)")
@@ -80,10 +57,24 @@ class QueryResponse(BaseModel):
 
 @app.get("/health")
 def health():
+    return {"status": "ok", "comuni_caricati": list(_prg_cache.keys()),
+            "data_dir": DATA_DIR, "version": "1.1.0"}
+
+
+@app.get("/debug")
+def debug():
+    """Mostra stato filesystem — per troubleshooting deploy"""
+    data_ale = os.path.join(DATA_DIR, "ALESSANDRIA")
+    chunks_dir = "/app/data_chunks"
     return {
-        "status": "ok",
-        "comuni_caricati": list(_prg_cache.keys()),
-        "data_dir": DATA_DIR
+        "data_dir_exists": os.path.exists(DATA_DIR),
+        "alessandria_dir_exists": os.path.exists(data_ale),
+        "shp_exists": os.path.exists(os.path.join(data_ale, "dest_uso_polyg.shp")),
+        "alessandria_files": sorted(os.listdir(data_ale)) if os.path.exists(data_ale) else [],
+        "chunks_dir_exists": os.path.exists(chunks_dir),
+        "chunks_count": len(glob.glob(f"{chunks_dir}/chunk_*")) if os.path.exists(chunks_dir) else 0,
+        "chunk_sizes": {os.path.basename(f): os.path.getsize(f) 
+                        for f in sorted(glob.glob(f"{chunks_dir}/chunk_*"))[:3]}
     }
 
 
@@ -96,25 +87,18 @@ def list_comuni():
         entry_path = os.path.join(DATA_DIR, entry)
         if os.path.isdir(entry_path):
             has_shp = os.path.exists(os.path.join(entry_path, "dest_uso_polyg.shp"))
-            comuni.append({
-                "comune": entry,
-                "shapefile_disponibile": has_shp,
-                "in_cache": entry in _prg_cache
-            })
+            comuni.append({"comune": entry, "shapefile_disponibile": has_shp, "in_cache": entry in _prg_cache})
     return {"comuni": comuni, "totale": len(comuni)}
 
 
 @app.get("/metadata/{comune}")
 def get_metadata(comune: str):
-    prg = get_prg(comune)
-    return prg.metadata()
+    return get_prg(comune).metadata()
 
 
 @app.post("/query", response_model=QueryResponse)
 def query_prg(req: QueryRequest):
-    prg = get_prg(req.comune)
-    result = prg.query(lat=req.lat, lon=req.lon, buffer_m=req.buffer_m)
-    return result
+    return get_prg(req.comune).query(lat=req.lat, lon=req.lon, buffer_m=req.buffer_m)
 
 
 @app.post("/query/batch")
@@ -124,9 +108,7 @@ def query_prg_batch(requests: list[QueryRequest]):
     results = []
     for req in requests:
         try:
-            prg = get_prg(req.comune)
-            result = prg.query(lat=req.lat, lon=req.lon, buffer_m=req.buffer_m)
-            results.append({"success": True, "data": result})
+            results.append({"success": True, "data": get_prg(req.comune).query(req.lat, req.lon, req.buffer_m)})
         except Exception as e:
             results.append({"success": False, "error": str(e), "comune": req.comune})
     return results
