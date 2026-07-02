@@ -1,0 +1,398 @@
+{
+ "comune": "Alessandria",
+ "provincia": "AL",
+ "regione": "Piemonte",
+ "istat": "006003",
+ "strumento": "PRGC 1990 - testo coordinato NTA (Nov. 2022, agg. pubbl. 07/07/2025)",
+ "fonte_url": "https://servizionline.comune.alessandria.it/cmsalessandria/portale/trasparenza/getfile.aspx?ref=531",
+ "n_articoli": 110,
+ "n_zone": 16,
+ "zone": [
+  {
+   "articolo": "Art. 34",
+   "nome": "Area Centrale Storica (residenziale 1ª classe)",
+   "categoria": "residenziale",
+   "destinazioni_ammesse": [
+    "residenza",
+    "case-albergo, pensioni, alberghi, ristoranti",
+    "esercizi commerciali di vicinato con superficie utile di vendita fino a",
+    "uffici pubblici e privati, studi professionali, banche",
+    "locali per lo svago e il divertimento in sede propria",
+    "autorimesse e parcheggi e garage di uso pubblico e privato",
+    "artigianato di servizio con esclusione delle lavorazioni inquinanti o",
+    "magazzini e depositi per soli materiali non esplosivi, non infiammabili,",
+    "servizi sociali e culturali di interesse generale",
+    "sedi di istituzioni pubbliche, rappresentative o di interesse generale",
+    "attrezzature per l’istruzione, la sanità e socio-assistenziali anche private",
+    "attrezzature a carattere religioso",
+    "con provvedimento autorizzativo a norma del DPR n.° 380 del",
+    "con \"Strumento Urbanistico Esecutivo\" ovvero Piano di recupero ai",
+    "conservazione ed aumento delle aree libere con eliminazione delle",
+    "salvaguardia di tutte le essenze arboree esistenti"
+   ],
+   "parametri": {
+    "indice_fabbric_fondiario_If": {
+     "valore": 4.8,
+     "unita": "mc/mq"
+    },
+    "altezza_max_m": 14.5,
+    "rapporto_copertura_max_pct": 45
+   },
+   "modalita_intervento": "Prevalente SUE / intervento diretto in centro storico",
+   "note": "",
+   "riferimento": "NTA PRGC Città di Alessandria — Art. 34"
+  },
+  {
+   "articolo": "Art. 35",
+   "nome": "Aree residenziali della città di 2ª classe",
+   "categoria": "residenziale",
+   "destinazioni_ammesse": [
+    "residenza",
+    "servizi sociali e culturali o di interesse generale",
+    "attrezzature di interesse comune",
+    "esercizi commerciali di vicinato con superficie utile di vendita fino a",
+    "attrezzature a carattere religioso",
+    "ristoranti, bar, locali di divertimento",
+    "artigianato di servizio con esclusione delle lavorazioni inquinanti o",
+    "laboratori di produzione che non presentino caratteri di nocività o",
+    "attrezzature per l’istruzione, la sanità e socio-assistenziali anche private",
+    "teatri, cinematografi, sale di spettacolo o riunione",
+    "uffici pubblici, privati, banche, studi professionali, anche in sede",
+    "case-albergo, pensioni, alberghi",
+    "garage di uso pubblico o privato anche non direttamente funzionali alle"
+   ],
+   "parametri": {
+    "indice_fabbric_fondiario_If": {
+     "valore": 3.0,
+     "unita": "mc/mq"
+    },
+    "altezza_max_m": 25.0,
+    "rapporto_copertura_max_pct": 45
+   },
+   "modalita_intervento": "Intervento edilizio diretto / SUE ove previsto",
+   "note": "",
+   "riferimento": "NTA PRGC Città di Alessandria — Art. 35"
+  },
+  {
+   "articolo": "Art. 35 bis",
+   "nome": "Aree residenziali della città di 3ª classe",
+   "categoria": "residenziale",
+   "destinazioni_ammesse": [
+    "residenza",
+    "servizi sociali di proprietà pubblica o di interesse generale",
+    "attrezzature di interesse comune",
+    "esercizi commerciali di vicinato con superficie utile di vendita fino a",
+    "attrezzature a carattere religioso",
+    "ristoranti, bar, locali di divertimento",
+    "artigianato di servizio con esclusione delle lavorazioni inquinanti o",
+    "laboratori di produzione che non presentino caratteri di nocività o",
+    "attrezzature per l’istruzione, la sanità e socio-assistenziali anche private",
+    "teatri, cinematografi, sale di spettacolo o riunione",
+    "uffici pubblici, privati, banche, studi professionali, anche in sede",
+    "case-albergo, pensioni, alberghi",
+    "garage di uso pubblico o privato anche non direttamente funzionali"
+   ],
+   "parametri": {
+    "indice_fabbric_fondiario_If": {
+     "valore": 2.0,
+     "unita": "mc/mq"
+    },
+    "altezza_max_m": 10.5,
+    "rapporto_copertura_max_pct": 45
+   },
+   "modalita_intervento": "Intervento edilizio diretto / SUE ove previsto",
+   "note": "",
+   "riferimento": "NTA PRGC Città di Alessandria — Art. 35 bis"
+  },
+  {
+   "articolo": "Art. 36",
+   "nome": "Aree residenziali dei sobborghi di 1ª classe",
+   "categoria": "residenziale",
+   "destinazioni_ammesse": [
+    "Residenza",
+    "servizi sociali di proprietà pubblica o di interesse generale",
+    "attrezzature di interesse commune",
+    "esercizi commerciali di vicinato con superficie utile di vendita fino a",
+    "attrezzature a carattere religioso",
+    "ristoranti, bar, locali di divertimento",
+    "artigianato di servizio con esclusione delle lavorazioni inquinanti o",
+    "laboratori di produzione che non presentino caratteri di nocività o",
+    "attrezzature per l’istruzione, la sanità e socio-assistenziali anche private",
+    "teatri, cinematografi, sale di spettacolo o riunione",
+    "uffici pubblici, privati, banche, studi professionali anche in sede propria",
+    "case-albergo, pensioni, alberghi",
+    "garage di uso pubblico o privato anche non direttamente funzionali alle"
+   ],
+   "parametri": {
+    "indice_fabbric_fondiario_If": {
+     "valore": 1.5,
+     "unita": "mc/mq"
+    },
+    "altezza_max_m": 10.5
+   },
+   "modalita_intervento": "Intervento edilizio diretto / SUE ove previsto",
+   "note": "",
+   "riferimento": "NTA PRGC Città di Alessandria — Art. 36"
+  },
+  {
+   "articolo": "Art. 37",
+   "nome": "Aree residenziali dei sobborghi di 2ª classe",
+   "categoria": "residenziale",
+   "destinazioni_ammesse": [
+    "residenza",
+    "servizi sociali di proprietà pubblica o di interesse generale",
+    "attrezzature di interesse comune",
+    "esercizi commerciali di vicinato con superficie utile di vendita fino a",
+    "attrezzature a carattere religioso",
+    "ristoranti, bar, locali di divertimento",
+    "artigianato di servizio con esclusione delle lavorazioni inquinanti o",
+    "laboratori di produzione che non presentino caratteri di nocività o",
+    "teatri, cinematografi, sale di spettacolo o riunione",
+    "uffici pubblici, privati, banche, studi professionali anche in sede propria",
+    "case-albergo, pensioni, alberghi",
+    "garage di uso pubblico o privato anche non direttamente funzionali alle"
+   ],
+   "parametri": {
+    "indice_fabbric_fondiario_If": {
+     "valore": 1.2,
+     "unita": "mc/mq"
+    },
+    "altezza_max_m": 10.5
+   },
+   "modalita_intervento": "Intervento edilizio diretto / SUE ove previsto",
+   "note": "",
+   "riferimento": "NTA PRGC Città di Alessandria — Art. 37"
+  },
+  {
+   "articolo": "Art. 37 bis",
+   "nome": "Aree residenziali dei sobborghi di 3ª classe",
+   "categoria": "residenziale",
+   "destinazioni_ammesse": [
+    "residenza",
+    "servizi sociali di proprietà pubblica o di interesse generale",
+    "attrezzature di interesse comune",
+    "esercizi commerciali di vicinato con superficie utile di vendita fino a",
+    "attrezzature a carattere religioso",
+    "ristoranti, bar, locali di divertimento",
+    "artigianato di servizio con esclusione delle lavorazioni inquinanti o",
+    "laboratori di produzione che non presentino caratteri di nocività o",
+    "teatri, cinematografi, sale di spettacolo o riunione",
+    "uffici pubblici, privati, banche, studi professionali anche in sede propria",
+    "case-albergo, pensioni, alberghi",
+    "garage di uso pubblico o privato anche non direttamente funzionali alle"
+   ],
+   "parametri": {
+    "indice_fabbric_fondiario_If": {
+     "valore": 1.0,
+     "unita": "mc/mq"
+    },
+    "altezza_max_m": 10.5
+   },
+   "modalita_intervento": "Intervento edilizio diretto / SUE ove previsto",
+   "note": "",
+   "riferimento": "NTA PRGC Città di Alessandria — Art. 37 bis"
+  },
+  {
+   "articolo": "Art. 38",
+   "nome": "Nuclei residenziali in aree agricole",
+   "categoria": "residenziale",
+   "destinazioni_ammesse": [
+    "residenza",
+    "attrezzature di interesse comune",
+    "esercizi commerciali di vicinato con superficie utile di vendita fino a",
+    "ristoranti, bar, locali di divertimento anche in sede propria",
+    "artigianato di servizio per una superficie utile non superiore a mq.600 e"
+   ],
+   "parametri": {
+    "indice_fabbric_fondiario_If": {
+     "valore": 0.4,
+     "unita": "mc/mq"
+    },
+    "altezza_max_m": 7.5,
+    "rapporto_copertura_max_pct": 35
+   },
+   "modalita_intervento": "Intervento edilizio diretto",
+   "note": "",
+   "riferimento": "NTA PRGC Città di Alessandria — Art. 38"
+  },
+  {
+   "articolo": "Art. 39",
+   "nome": "Aree per attività produttive",
+   "categoria": "produttivo",
+   "destinazioni_ammesse": [],
+   "parametri": {
+    "indice_fabbric_fondiario_If": {
+     "valore": 0.2,
+     "unita": "mc/mq"
+    }
+   },
+   "modalita_intervento": "SUE / PIP",
+   "note": "If 0,2 mc/mq fino a 5.000 mq fondiari; 0,08 mc/mq oltre; min 1.600 mc",
+   "riferimento": "NTA PRGC Città di Alessandria — Art. 39"
+  },
+  {
+   "articolo": "Art. 40",
+   "nome": "Aree per insediamenti industriali",
+   "categoria": "produttivo",
+   "destinazioni_ammesse": [
+    "per i punti a, b, c, dell'articolo 39 una quantità minima pari al 20% delle",
+    "devono essere imposti per la nuova zona industriale D8, requisiti",
+    "l’area di interferenza tra la nuova zona industriale D8 e la zona di",
+    "in ambito convenzionale di SUE dovranno essere previste opere di"
+   ],
+   "parametri": {
+    "indice_util_territoriale_Ut": {
+     "valore": 0.6,
+     "unita": "mq/mq"
+    },
+    "indice_util_fondiaria_Uf": {
+     "valore": 0.8,
+     "unita": "mq/mq"
+    },
+    "rapporto_copertura_max_pct": 60,
+    "distanza_min_confini_m": 10.0,
+    "distanza_min_strade_m": 5.0
+   },
+   "modalita_intervento": "SUE / PIP-PEC",
+   "note": "",
+   "riferimento": "NTA PRGC Città di Alessandria — Art. 40"
+  },
+  {
+   "articolo": "Art. 40 bis",
+   "nome": "Aree per insediamenti per la logistica",
+   "categoria": "produttivo",
+   "destinazioni_ammesse": [],
+   "parametri": {
+    "indice_util_territoriale_Ut": {
+     "valore": 0.5,
+     "unita": "mq/mq"
+    },
+    "indice_util_fondiaria_Uf": {
+     "valore": 0.7,
+     "unita": "mq/mq"
+    },
+    "rapporto_copertura_max_pct": 50,
+    "distanza_min_confini_m": 10.0,
+    "distanza_min_strade_m": 5.0
+   },
+   "modalita_intervento": "SUE",
+   "note": "",
+   "riferimento": "NTA PRGC Città di Alessandria — Art. 40 bis"
+  },
+  {
+   "articolo": "Art. 41",
+   "nome": "Aree per insediamenti artigianali e deposito",
+   "categoria": "produttivo",
+   "destinazioni_ammesse": [
+    "per i punti a, b, c, dell'articolo 39 una quantità minima pari al 20% delle"
+   ],
+   "parametri": {
+    "indice_util_territoriale_Ut": {
+     "valore": 0.6,
+     "unita": "mq/mq"
+    },
+    "indice_util_fondiaria_Uf": {
+     "valore": 0.8,
+     "unita": "mq/mq"
+    },
+    "rapporto_copertura_max_pct": 60,
+    "distanza_min_confini_m": 10.0,
+    "distanza_min_strade_m": 5.0
+   },
+   "modalita_intervento": "SUE / PIP",
+   "note": "",
+   "riferimento": "NTA PRGC Città di Alessandria — Art. 41"
+  },
+  {
+   "articolo": "Art. 43",
+   "nome": "Aree per attività commerciali",
+   "categoria": "commerciale",
+   "destinazioni_ammesse": [],
+   "parametri": {
+    "indice_util_fondiaria_Uf": {
+     "valore": 0.6,
+     "unita": "mq/mq"
+    },
+    "rapporto_copertura_max_pct": 50,
+    "distanza_min_confini_m": 10.0,
+    "distanza_min_strade_m": 5.0
+   },
+   "modalita_intervento": "SUE ove previsto",
+   "note": "",
+   "riferimento": "NTA PRGC Città di Alessandria — Art. 43"
+  },
+  {
+   "articolo": "Art. 44",
+   "nome": "Aree per attività direzionali",
+   "categoria": "direzionale",
+   "destinazioni_ammesse": [],
+   "parametri": {
+    "indice_util_fondiaria_Uf": {
+     "valore": 0.6,
+     "unita": "mq/mq"
+    },
+    "altezza_max_m": 24.0,
+    "rapporto_copertura_max_pct": 45,
+    "distanza_min_confini_m": 10.0,
+    "distanza_min_strade_m": 5.0
+   },
+   "modalita_intervento": "SUE ove previsto",
+   "note": "",
+   "riferimento": "NTA PRGC Città di Alessandria — Art. 44"
+  },
+  {
+   "articolo": "Art. 44 bis",
+   "nome": "Aree per attività turistico ricettive",
+   "categoria": "turistico",
+   "destinazioni_ammesse": [],
+   "parametri": {
+    "indice_util_territoriale_Ut": {
+     "valore": 0.6,
+     "unita": "mq/mq"
+    },
+    "indice_util_fondiaria_Uf": {
+     "valore": 0.8,
+     "unita": "mq/mq"
+    },
+    "altezza_max_m": 24.0,
+    "rapporto_copertura_max_pct": 45,
+    "distanza_min_confini_m": 10.0,
+    "distanza_min_strade_m": 5.0
+   },
+   "modalita_intervento": "SUE ove previsto",
+   "note": "",
+   "riferimento": "NTA PRGC Città di Alessandria — Art. 44 bis"
+  },
+  {
+   "articolo": "Art. 45",
+   "nome": "Aree destinate alle attività agricole",
+   "categoria": "agricolo",
+   "destinazioni_ammesse": [
+    "terreni a colture orticole o floricole specializzate: 0,05 mc./mq",
+    "terreni a seminativo ed a prato permanente o altra coltivazione: 0,02"
+   ],
+   "parametri": {
+    "altezza_max_m": 6.5,
+    "rapporto_copertura_max_pct": 60,
+    "distanza_min_strade_m": 5.0
+   },
+   "modalita_intervento": "Intervento diretto (soggetti art.25 LR56/77)",
+   "note": "Densità fondiaria per abitazioni rurali variabile per coltura (0,05–0,06 mc/mq); vincolo destinazione 20 anni",
+   "riferimento": "NTA PRGC Città di Alessandria — Art. 45"
+  },
+  {
+   "articolo": "Art. 45 bis",
+   "nome": "Aree per attività agricole specializzate",
+   "categoria": "agricolo",
+   "destinazioni_ammesse": [],
+   "parametri": {
+    "altezza_max_m": 6.5,
+    "rapporto_copertura_max_pct": 70,
+    "distanza_min_confini_m": 5.0
+   },
+   "modalita_intervento": "Intervento diretto convenzionato",
+   "note": "",
+   "riferimento": "NTA PRGC Città di Alessandria — Art. 45 bis"
+  }
+ ]
+}
