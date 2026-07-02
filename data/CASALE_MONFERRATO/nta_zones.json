@@ -1,0 +1,156 @@
+{
+ "comune": "Casale Monferrato",
+ "provincia": "AL",
+ "regione": "Piemonte",
+ "istat": "006039",
+ "strumento": "PRGC (approv. D.G.R. 06/06/1989 n.93-29164) - Norme di Attuazione testo coordinato Variante 12 (2005)",
+ "fonte_url": "http://old.comune.casale-monferrato.al.it/PISL-RONZONE/PISL-RONZONEECO/06%20Allegati/PRGC-NDA-var12.PDF",
+ "nota_struttura": "PRG a categorie/sottocategorie ex DM 1444/68. Parametri edificatori (densita', altezze) in Art.13 e nelle tabelle di zona; per i valori puntuali usare /nta/query o consultare Art.13.",
+ "n_articoli": 25,
+ "n_zone": 11,
+ "zone": [
+  {
+   "articolo": "Art. 11",
+   "nome": "Zona Ar — con preminente destinazione residenziale",
+   "codice_zona": "Ar",
+   "categoria": "Centro storico / interesse storico-ambientale",
+   "destinazioni_ammesse": [
+    "vedi Art. 12 (destinazioni proprie/ammesse/escluse)"
+   ],
+   "parametri": {},
+   "modalita_intervento": "vedi Art. 13 (tipi di intervento) e Titolo V",
+   "note": "Parametri numerici in Art.13/tabelle di zona — interrogare /nta/query",
+   "riferimento": "NTA PRGC Casale Monferrato — Art. 11 (cat. Ar)"
+  },
+  {
+   "articolo": "Art. 11",
+   "nome": "Zona Ap — con preminente destinazione produttiva",
+   "codice_zona": "Ap",
+   "categoria": "Centro storico / interesse storico-ambientale",
+   "destinazioni_ammesse": [
+    "vedi Art. 12 (destinazioni proprie/ammesse/escluse)"
+   ],
+   "parametri": {},
+   "modalita_intervento": "vedi Art. 13 (tipi di intervento) e Titolo V",
+   "note": "Parametri numerici in Art.13/tabelle di zona — interrogare /nta/query",
+   "riferimento": "NTA PRGC Casale Monferrato — Art. 11 (cat. Ap)"
+  },
+  {
+   "articolo": "Art. 11",
+   "nome": "Zona Asr — con preminente destinazione a pubblici servizi afferenti la residenza",
+   "codice_zona": "Asr",
+   "categoria": "Centro storico / interesse storico-ambientale",
+   "destinazioni_ammesse": [
+    "vedi Art. 12 (destinazioni proprie/ammesse/escluse)"
+   ],
+   "parametri": {},
+   "modalita_intervento": "vedi Art. 13 (tipi di intervento) e Titolo V",
+   "note": "Parametri numerici in Art.13/tabelle di zona — interrogare /nta/query",
+   "riferimento": "NTA PRGC Casale Monferrato — Art. 11 (cat. Asr)"
+  },
+  {
+   "articolo": "Art. 11",
+   "nome": "Zona Asp — con preminente destinazione a pubblici servizi afferenti le attività produttive",
+   "codice_zona": "Asp",
+   "categoria": "Centro storico / interesse storico-ambientale",
+   "destinazioni_ammesse": [
+    "vedi Art. 12 (destinazioni proprie/ammesse/escluse)"
+   ],
+   "parametri": {},
+   "modalita_intervento": "vedi Art. 13 (tipi di intervento) e Titolo V",
+   "note": "Parametri numerici in Art.13/tabelle di zona — interrogare /nta/query",
+   "riferimento": "NTA PRGC Casale Monferrato — Art. 11 (cat. Asp)"
+  },
+  {
+   "articolo": "Art. 11",
+   "nome": "Zona Br — con preminente destinazione residenziale",
+   "codice_zona": "Br",
+   "categoria": "Aree edificate di riordino/completamento",
+   "destinazioni_ammesse": [
+    "vedi Art. 12 (destinazioni proprie/ammesse/escluse)"
+   ],
+   "parametri": {},
+   "modalita_intervento": "vedi Art. 13 (tipi di intervento) e Titolo V",
+   "note": "Parametri numerici in Art.13/tabelle di zona — interrogare /nta/query",
+   "riferimento": "NTA PRGC Casale Monferrato — Art. 11 (cat. Br)"
+  },
+  {
+   "articolo": "Art. 11",
+   "nome": "Zona Bsr — con preminente destinazione a pubblici servizi afferenti la residenza",
+   "codice_zona": "Bsr",
+   "categoria": "Aree edificate di riordino/completamento",
+   "destinazioni_ammesse": [
+    "vedi Art. 12 (destinazioni proprie/ammesse/escluse)"
+   ],
+   "parametri": {},
+   "modalita_intervento": "vedi Art. 13 (tipi di intervento) e Titolo V",
+   "note": "Parametri numerici in Art.13/tabelle di zona — interrogare /nta/query",
+   "riferimento": "NTA PRGC Casale Monferrato — Art. 11 (cat. Bsr)"
+  },
+  {
+   "articolo": "Art. 11",
+   "nome": "Zona Bsp — con preminente destinazione a pubblici servizi afferenti le attività produttive",
+   "codice_zona": "Bsp",
+   "categoria": "Aree edificate di riordino/completamento",
+   "destinazioni_ammesse": [
+    "vedi Art. 12 (destinazioni proprie/ammesse/escluse)"
+   ],
+   "parametri": {},
+   "modalita_intervento": "vedi Art. 13 (tipi di intervento) e Titolo V",
+   "note": "Parametri numerici in Art.13/tabelle di zona — interrogare /nta/query",
+   "riferimento": "NTA PRGC Casale Monferrato — Art. 11 (cat. Bsp)"
+  },
+  {
+   "articolo": "Art. 11",
+   "nome": "Zona Cr — con preminente destinazione residenziale",
+   "codice_zona": "Cr",
+   "categoria": "Aree di nuovo impianto/espansione",
+   "destinazioni_ammesse": [
+    "vedi Art. 12 (destinazioni proprie/ammesse/escluse)"
+   ],
+   "parametri": {},
+   "modalita_intervento": "vedi Art. 13 (tipi di intervento) e Titolo V",
+   "note": "Parametri numerici in Art.13/tabelle di zona — interrogare /nta/query",
+   "riferimento": "NTA PRGC Casale Monferrato — Art. 11 (cat. Cr)"
+  },
+  {
+   "articolo": "Art. 11",
+   "nome": "Zona Csr — con preminente destinazione a pubblici servizi afferenti la residenza",
+   "codice_zona": "Csr",
+   "categoria": "Aree di nuovo impianto/espansione",
+   "destinazioni_ammesse": [
+    "vedi Art. 12 (destinazioni proprie/ammesse/escluse)"
+   ],
+   "parametri": {},
+   "modalita_intervento": "vedi Art. 13 (tipi di intervento) e Titolo V",
+   "note": "Parametri numerici in Art.13/tabelle di zona — interrogare /nta/query",
+   "riferimento": "NTA PRGC Casale Monferrato — Art. 11 (cat. Csr)"
+  },
+  {
+   "articolo": "Art. 11",
+   "nome": "Zona Csp — con preminente destinazione a pubblici servizi afferenti le attività produttive",
+   "codice_zona": "Csp",
+   "categoria": "Aree di nuovo impianto/espansione",
+   "destinazioni_ammesse": [
+    "vedi Art. 12 (destinazioni proprie/ammesse/escluse)"
+   ],
+   "parametri": {},
+   "modalita_intervento": "vedi Art. 13 (tipi di intervento) e Titolo V",
+   "note": "Parametri numerici in Art.13/tabelle di zona — interrogare /nta/query",
+   "riferimento": "NTA PRGC Casale Monferrato — Art. 11 (cat. Csp)"
+  },
+  {
+   "articolo": "Art. 11",
+   "nome": "Zona Frp — come Fr, di carattere privato",
+   "codice_zona": "Frp",
+   "categoria": "Servizi, verde e attrezzature generali",
+   "destinazioni_ammesse": [
+    "vedi Art. 12 (destinazioni proprie/ammesse/escluse)"
+   ],
+   "parametri": {},
+   "modalita_intervento": "vedi Art. 13 (tipi di intervento) e Titolo V",
+   "note": "Parametri numerici in Art.13/tabelle di zona — interrogare /nta/query",
+   "riferimento": "NTA PRGC Casale Monferrato — Art. 11 (cat. Frp)"
+  }
+ ]
+}
