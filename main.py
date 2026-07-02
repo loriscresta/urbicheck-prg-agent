@@ -1,17 +1,13 @@
 """PRG Agent — Microservizio per query spaziali sul PRG Piemonte"""
-
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
 import os, glob, logging, subprocess, zipfile
-
 from prg_query import PRGQuery
 from downloader import ensure_shapefile
-
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-
 # === STARTUP: assembla shapefile da chunk se necessario ===
 def assemble_shapefile_from_chunks():
     data_dir = os.environ.get("DATA_DIR", "./data")
@@ -63,18 +59,16 @@ def assemble_shapefile_from_chunks():
         logger.error(f"❌ Errore assembly: {e}")
         import traceback
         logger.error(traceback.format_exc())
-
 # Esegui assembly all\'avvio
 assemble_shapefile_from_chunks()
-
 app = FastAPI(title="PRG Agent — Piemonte", version="1.2.0")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True,
                    allow_methods=["*"], allow_headers=["*"])
-
+# === NTA reader (Norme Tecniche di Attuazione) ===
+from nta_reader import router as nta_router
+app.include_router(nta_router)
 DATA_DIR = os.environ.get("DATA_DIR", "./data")
 _prg_cache: dict[str, PRGQuery] = {}
-
-
 def get_prg(comune: str) -> PRGQuery:
     key = comune.upper().strip()
     if key not in _prg_cache:
@@ -87,14 +81,11 @@ def get_prg(comune: str) -> PRGQuery:
         _prg_cache[key] = PRGQuery(comune_dir)
         logger.info(f"Shapefile {key} caricato ({_prg_cache[key].feature_count()} feature)")
     return _prg_cache[key]
-
-
 class QueryRequest(BaseModel):
     comune: str
     lat: float
     lon: float
     buffer_m: Optional[float] = 5.0
-
 class QueryResponse(BaseModel):
     comune: str
     coordinate: dict
@@ -104,13 +95,10 @@ class QueryResponse(BaseModel):
     caratt_storica: list
     fonte: str
     note: Optional[str] = None
-
-
 @app.get("/health")
 def health():
     return {"status": "ok", "comuni_caricati": list(_prg_cache.keys()),
             "data_dir": DATA_DIR, "version": "1.2.0"}
-
 @app.get("/debug")
 def debug():
     data_ale = os.path.join(DATA_DIR, "ALESSANDRIA")
@@ -124,7 +112,6 @@ def debug():
         "total_chunks_mb": round(total_chunks_size / 1024 / 1024, 1),
         "version": "1.2.0"
     }
-
 @app.get("/comuni")
 def list_comuni():
     if not os.path.exists(DATA_DIR):
@@ -137,15 +124,12 @@ def list_comuni():
                 "shapefile_disponibile": os.path.exists(os.path.join(ep, "dest_uso_polyg.shp")),
                 "in_cache": entry in _prg_cache})
     return {"comuni": comuni, "totale": len(comuni)}
-
 @app.get("/metadata/{comune}")
 def get_metadata(comune: str):
     return get_prg(comune).metadata()
-
 @app.post("/query", response_model=QueryResponse)
 def query_prg(req: QueryRequest):
     return get_prg(req.comune).query(lat=req.lat, lon=req.lon, buffer_m=req.buffer_m)
-
 @app.post("/query/batch")
 def query_prg_batch(requests: list[QueryRequest]):
     if len(requests) > 50:
@@ -157,7 +141,6 @@ def query_prg_batch(requests: list[QueryRequest]):
         except Exception as e:
             results.append({"success": False, "error": str(e), "comune": req.comune})
     return results
-
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
